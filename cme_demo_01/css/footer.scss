@@ -1,0 +1,31 @@
+#footerWrap{
+  #footer{
+    background:url("../images/powered_by_bt.png") no-repeat center 14px;
+    margin-top:30px;
+    padding:15px 0 45px;
+    border-top:1px solid #999;
+    color:#808080;
+    font-size:12px;
+    p{
+      float:left;
+    }
+    #footerMenu{
+      float:right;
+      li{
+        border-right:1px solid #999;
+        float:left;
+        a{
+          padding:0 10px;
+          color:#808080;
+          text-decoration: none;
+        }
+      }
+      li.last{
+        border:0;
+        a{
+          padding-right:0;
+        }
+      }
+    }
+  }
+}

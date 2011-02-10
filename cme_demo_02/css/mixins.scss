@@ -1,0 +1,61 @@
+@mixin globalWidth{
+  margin:0 auto;
+  width:960px;
+}
+
+@mixin fourRoundedCorners{
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+}
+
+@mixin rightRoundedCorners{
+  -moz-border-radius-topright: 3px;
+	-moz-border-radius-bottomright: 3px;
+	border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+@mixin leftRoundedCorners{
+  -moz-border-radius-topleft: 3px;
+	-moz-border-radius-bottomleft: 3px;
+	border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+@mixin standardButton{
+  background:#D9D9D9;
+  background: -moz-linear-gradient(0% 100% 90deg, #D9D9D9 0%, #D9D9D9 50%, #FFFFFF 50%, #FFFFFF 100%);
+  background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #FFFFFF), color-stop(0.5, #FFFFFF), color-stop(0.5, #D9D9D9), color-stop(1, #D9D9D9));
+  border: 1px solid #111;
+  box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.4), 0 1px 2px #999;
+  -moz-box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.4), 0 1px 2px #999;
+  -webkit-box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.4), 0 1px 2px #999;
+  color: #111;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  line-height: 1;
+  padding: 4px 10px 3px;
+  text-align: center;
+  text-shadow: 0px 0px 0px rgba(0, 0, 0, .8);
+  text-decoration:none;
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  @include fourRoundedCorners;
+  &:hover{
+    background:#333;
+    background: -moz-linear-gradient(0% 100% 90deg, #2a2a2a 0%, #3c3c3c 50%, #4e4e4e 50%, #868686 100%);
+    background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #868686), color-stop(0.5, #4e4e4e), color-stop(0.5, #3c3c3c), color-stop(1, #2a2a2a));
+    color:#fff;
+    text-shadow: 0px -1px 1px rgba(0, 0, 0, .8);
+  }
+  &:active{
+    background:#111;
+    background: -moz-linear-gradient(0% 100% 90deg, #202020 0%, #303030 50%, #404040 50%, #606060 100%);
+    background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #606060), color-stop(0.5, #404040), color-stop(0.5, #303030), color-stop(1, #202020));
+    color:#fff;
+    text-shadow: 0px -1px 1px rgba(0, 0, 0, .8);
+  }
+}

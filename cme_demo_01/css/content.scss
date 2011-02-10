@@ -1,0 +1,434 @@
+#loginWrap{
+  margin:0 auto;
+  width:360px;
+  h2{
+    margin-top:40px;
+    font-size:22px;
+  }
+  h4{
+    font-size:18px;
+    font-weight:normal;
+  }
+  p{
+    color:#808080;
+    text-align:justify;
+  }
+  #loginFormWrap{
+    padding:100px 0;
+    ul{
+      margin-top:20px;
+      clear:both;
+      overflow:auto;
+      li{
+        padding:4px;
+        float:left;
+        input.text{
+          margin-top:5px;
+          padding:5px;
+          border:1px solid #999;
+          width:150px;
+          @include fourRoundedCorners;
+        }
+        input.submit{
+          @include fourRoundedCorners;
+        }
+        span{
+          font-size:13px;
+        }
+      }
+      li.right{
+        padding:3px;
+        float:right;
+        a.loginButton{
+          color:#111;
+          @include standardButton;
+        }
+      }
+    }
+  }
+}
+
+#contentWrap{
+  margin-top:50px;
+  #content{
+    margin:0 auto;
+    width:920px;
+    #contentTop{
+      overflow:auto;
+    }
+    #contentBottom{
+      clear:both;
+    }
+  }
+}
+
+#tradeFormWrap, #tradeFormWrap01, #tradeFormWrap02{
+  overflow:auto;
+  ul{
+    overflow:auto;
+    li.left, li.swapRight{
+      float:left;
+      label{
+        color:#808080;
+        font-weight:bold;
+      }
+      ul#amountChooser{
+        padding-top:35px;
+        clear:left;
+        overflow:auto;
+        li{
+          margin-right:15px;
+          float:left;
+          img{
+            margin-left:10px;
+            vertical-align:middle;
+            cursor:pointer;
+          }
+        }
+        input{
+          margin:5px 2px;
+          padding:3px 5px;
+          border:1px solid #999;
+          width:175px;
+          font-size:24px;
+          font-weight:bold;
+          @include fourRoundedCorners;
+        }
+        #swapAmount02{
+          margin:5px 0 9px;
+          padding:3px 5px;
+          width:177px;
+          height:28px;
+          font-size:24px;
+          font-weight:bold;
+        }
+        span{
+          color:#808080;
+          font-weight:bold;
+        }
+      }
+      ul#pairing{
+        clear:left;
+        li{
+          margin-right:25px;
+          float:left;
+          select{
+            padding:3px;
+          }
+          span{
+            margin-left:10px;
+            font-weight:bold;
+          }
+        }
+        #swapPair{
+          padding:3px 0 0 0;
+          width:87px;
+          color:#808080;
+        }
+        #swapPair02{
+          padding:3px 0 0 0;
+          width:87px;
+          color:#808080;
+        }
+        #swapDelt02{
+          padding:3px 0 0 0;
+          color:#808080;
+        }
+      }
+    }
+    li.swapRight{
+      /*margin-right:47px;*/
+      float:right;
+    }
+  }
+}
+
+ul#tradeSelect{
+  clear:left;
+  margin-top:25px;
+  overflow:auto;
+  li{
+    margin-right:10px;
+    float:left;
+  }
+}
+
+ul#tradeSelect01{
+  margin:25px 0 15px;
+  padding-left:15px;
+  width:150px;
+  overflow:auto;
+  li{
+    margin-right:10px;
+    float:left;
+  }
+}
+
+ul#tradeSelect02{
+  margin:25px 0 15px;
+  padding-left:15px;
+  width:150px;
+  font-weight:bold;
+  overflow:auto;
+  li{
+    padding-left:15px;
+    height:23px;
+    overflow:auto;
+  }
+  li#buyIndicator{
+    background:url("../images/green_dot.png") no-repeat 0 3px;
+  }
+  li#sellIndicator{
+    background:url("../images/red_dot.png") no-repeat 0 3px;
+  }
+}
+
+
+#contentBottom, #tradeFormWrap{
+  #buy, #sell, #buy01, #sell01, #buy02, #sell02, #twoway{
+    text-transform:uppercase;
+    @include standardButton;
+    &:hover{
+      background:#3286ba;
+      background: -moz-linear-gradient(0% 100% 90deg, #3286ba 0%, #228aca 50%, #0d619b 50%, #084d88 100%);
+      background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #084d88), color-stop(0.5, #0d619b), color-stop(0.5, #228aca), color-stop(1, #3286ba));
+      color:#fff;
+      text-shadow: 0px -1px 1px rgba(0, 0, 0, .8);
+    }
+    &:active{
+      background:#3286ba;
+      background: -moz-linear-gradient(0% 100% 90deg, #3286ba 0%, #228aca 50%, #0d619b 50%, #084d88 100%);
+      background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #053660), color-stop(0.5, #0d619b), color-stop(0.5, #228aca), color-stop(1, #3286ba));
+      color:#fff;
+      text-shadow: 0px -1px 1px rgba(0, 0, 0, .8);
+    }
+  }
+  #buy, #buy01, #buy02{
+    &:hover{
+      background:#64a01f;
+      background: -moz-linear-gradient(0% 100% 90deg, #64a01f 0%, #64a01f 50%, #148003 50%, #148003 100%);
+      background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #148003), color-stop(0.5, #148003), color-stop(0.5, #64a01f), color-stop(1, #64a01f));
+      color:#fff;
+      text-shadow: 0px -1px 1px rgba(0, 0, 0, .8);
+    }
+    &:active{
+      background:#64a01f;
+      background: -moz-linear-gradient(0% 100% 90deg, #64a01f 0%, #64a01f 50%, #148003 50%, #148003 100%);
+      background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #148003), color-stop(0.5, #148003), color-stop(0.5, #64a01f), color-stop(1, #64a01f));
+      color:#fff;
+      text-shadow: 0px -1px 1px rgba(0, 0, 0, .8);
+    }
+  }
+  #sell, #sell01, #sell02{
+    &:hover{
+      background:#de464d;
+      background: -moz-linear-gradient(0% 100% 90deg, #de464d 0%, #e63441 50%, #df1e30 50%, #b5061a 100%);
+      background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #b5061a), color-stop(0.5, #df1e30), color-stop(0.5, #e63441), color-stop(1, #de464d));
+      color:#fff;
+      text-shadow: 0px -1px 1px rgba(0, 0, 0, .8);
+    }
+    &:active{
+      background:#de464d;
+      background: -moz-linear-gradient(0% 100% 90deg, #de464d 0%, #e63441 50%, #df1e30 50%, #b5061a 100%);
+      background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #b5061a), color-stop(0.5, #df1e30), color-stop(0.5, #e63441), color-stop(1, #de464d));
+      color:#fff;
+      text-shadow: 0px -1px 1px rgba(0, 0, 0, .8);
+    }
+  }
+}
+
+
+
+#tradeFormWrap01{
+  float:left;
+}
+
+#tradeFormWrap02{
+  float:right;
+}
+
+
+
+#streamWrap{
+  clear:both;
+  overflow:auto;
+  ul{
+    margin-top:20px;
+    li.timer{
+      background:url(../images/ajaxLoader.gif) no-repeat 0 8px;
+      margin-top:28px;
+      padding:8px 8px 8px 22px;
+      color:#808080;
+      font-weight:bold;
+    }
+    li.oneway, li.twoway, li.timer{
+      margin-right:8px;
+      float:left;
+      ul{
+        float:left;
+        li{
+          margin-top:8px;
+          padding:8px;
+          border:1px solid #999;
+          font-size:18px;
+          font-weight:bold;
+          @include fourRoundedCorners;
+          a{
+            margin:0 0 3px 20px;
+            text-transform:uppercase;
+            float:right;
+            @include standardButton;
+          }
+          input{
+            margin:5px 0 3px 20px;
+            float:right;
+          }
+        }
+        li.lowest{
+          background-image: -webkit-gradient(
+              linear,
+              left bottom,
+              left top,
+              color-stop(0.09, #F07500),
+              color-stop(0.55, #FFA600)
+          );
+          background-image: -moz-linear-gradient(
+              center bottom,
+              #F07500 9%,
+              #FFA600 55%
+          );
+        }
+      }
+    }
+    li.swapStreamTwo{
+      margin-left:226px;
+    }
+  }
+}
+
+#streamWrap01{
+  overflow:auto;
+  clear:both;
+  ul#swapDataList{
+    li.swapDataListItem#swapTimer{
+      background:url(../images/ajaxLoader.gif) no-repeat 0 8px;
+      margin-top:72px;
+      padding:8px 8px 8px 22px;
+      color:#808080;
+      font-weight:bold;
+    }
+    li.swapDataListItem{
+      padding-right:30px;
+      float:left;
+      a{
+        margin:75px 0 3px 00px;
+        text-transform:uppercase;
+        float:right;
+        @include standardButton;
+      }
+      li.dataList{
+        ul{
+          li{
+            margin-top:8px;
+            padding:8px;
+            border:1px solid #999;
+            font-size:18px;
+            font-weight:bold;
+            @include fourRoundedCorners;
+            input{
+              margin:5px 0 3px 20px;
+              float:right;
+            }
+          }
+          li.lowest{
+            background-image: -webkit-gradient(
+                linear,
+                left bottom,
+                left top,
+                color-stop(0.09, #F07500),
+                color-stop(0.55, #FFA600)
+            );
+            background-image: -moz-linear-gradient(
+                center bottom,
+                #F07500 9%,
+                #FFA600 55%
+            );
+          }
+        }
+      }
+    }
+  }
+}
+
+#twoway.active{
+  background:#3286ba !important;
+  background: -moz-linear-gradient(0% 100% 90deg, #3286ba 0%, #228aca 50%, #0d619b 50%, #084d88 100%) !important;
+  background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #053660), color-stop(0.5, #0d619b), color-stop(0.5, #228aca), color-stop(1, #3286ba)) !important;
+  color:#fff !important;
+  text-shadow: 0px -1px 1px rgba(0, 0, 0, .8) !important;
+}
+#sell.active, #sell01.active, #sell02.active{
+  background:#de464d !important;
+  background: -moz-linear-gradient(0% 100% 90deg, #de464d 0%, #e63441 50%, #df1e30 50%, #b5061a 100%) !important;
+  background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #b5061a), color-stop(0.5, #df1e30), color-stop(0.5, #e63441), color-stop(1, #de464d)) !important;
+  color:#fff !important;
+  text-shadow: 0px -1px 1px rgba(0, 0, 0, .8) !important;
+}
+
+#buy.active, #buy01.active, #buy02.active{
+  background:#64a01f !important;
+  background: -moz-linear-gradient(0% 100% 90deg, #64a01f 0%, #64a01f 50%, #148003 50%, #148003 100%) !important;
+  background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #148003), color-stop(0.5, #148003), color-stop(0.5, #64a01f), color-stop(1, #64a01f)) !important;
+  color:#fff !important;
+  text-shadow: 0px -1px 1px rgba(0, 0, 0, .8) !important;
+}
+
+#expireMessage, #expireMessage01, #expireMessage02, #confirmMessage{
+  background:#f0f0f0;
+  margin:20px 0;
+  padding:9px;
+  border:1px solid #999;
+  width:400px;
+  font-size:14px;
+  font-weight:bold;
+  text-align:center;
+  clear:both;
+  overflow:auto;
+  p.msg{
+    font-size:14px;
+    font-weight:bold;
+    text-align:center;
+  }
+}
+
+
+
+#receipt{
+  margin:0 auto;
+  width:920px;
+  #receiptTable{
+    width:760px;
+    tr{
+      td{
+        padding:15px 40px 15px 0;
+        color:#808080;
+        span{
+          color:#111;
+          font-size:21px;
+          font-weight:bold;
+        }
+      }
+    }
+  }
+  #receiptControls{
+    margin:0 auto;
+    padding-top:30px;
+    width:920px;
+    a{
+      margin-right:15px;
+      float:left;
+      @include standardButton;
+    }
+  }
+}
+

@@ -1,0 +1,51 @@
+@import "reset.min.scss";
+@import "jquery_ui.scss";
+@import "mixins.scss";
+@import "header.scss";
+@import "footer.scss";
+@import "content.scss";
+@import "blotter.scss";
+
+//global classes
+html, body{
+  min-height:100%;
+}
+body{
+  background:#fff;
+  font: normal 14px "Arial", sans-serif;
+  color:#111;
+}
+
+ul{
+  margin:0;
+  padding:0;
+}
+
+li{
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+
+select, input{
+  font-size:18px;
+}
+
+a{
+  color:#111;
+  :hover{
+    color:#000;
+  }
+}
+
+//page layout
+#globalWrap{
+  height:100%;
+} 
+
+#contentWrap, #footerWrap, #blotterWrap{
+  clear:both;
+}
+#header, #footer, #blotter{
+  @include globalWidth;
+}

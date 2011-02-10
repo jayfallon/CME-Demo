@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>CME Presentation</title>
+    
+    <script src="javascript/jquery.min.js" type="text/javascript"></script>
+    <script src="javascript/jquery.tablesorter.min.js" type="text/javascript"></script>
+    <script src="javascript/application.js" type="text/javascript"></script>
+    <script>
+      $(function(){
+        $("#fullBlotterWrap table").tablesorter({widgets: ['zebra']});
+        $("#fullBlotterWrap tr td:nth-child(1)").addClass("right");
+        $("#fullBlotterWrap tr td:nth-child(7)").addClass("right");
+        $("#fullBlotterWrap tr td:nth-child(3)").addClass("left");
+        $("#fullBlotterWrap tr td:nth-child(8)").addClass("left");
+        $("td#buy.selected, td#sell.selected, td#twoway.selected").text('');
+      });
+    </script>
+    <link rel="stylesheet" href="css/application.css">
+    
+  </head>
+  
+  <body>
+    <div id="globalWrap">
+      <div id="headerWrap">
+        <div id="header">
+          <h1>
+            
+          </h1>
+          <div id="navWrap">
+            <ul id="mainNav">
+              <li id="spot"><a href="spot.html"><span>Spot</span></a></li>
+              <li id="forward"><a href="forward.html"><span>Forward</span></a></li>
+              <li id="swap"><a href="swap.html"><span>Swap</span></a></li>
+              <li id="blotter" class="selected"><a href="blotter.html"><span>Blotter</span></a></li>
+            </ul>
+            <ul id="functionalNav">
+              <li id="logout"><a href="index.html"><span>Logout</span></a></li>
+              <li id="help"><a href="#"><span>Help</span></a></li>
+            </ul>
+          </div><!-- #navWrap -->
+        </div><!-- #header -->
+      </div><!-- #headerWrap -->
+      <div id="contentWrap">
+        <div id="blotterControl">
+          <ul>
+            <li class="showControl">
+              <ul>
+                <li class="show">Show:</li>
+                <li><select name="showSelect">
+                  <option value="">Last 24 hours</option>
+                  <option value="">Last 48 hours</option>
+                  <option value="">Last 72 hours</option>
+                  <option value="">All</option>
+                </select></li>
+              </ul>
+            </li>
+            <li class="download">
+              <a href="" class="downloadButton">Download CSV</a>
+            </li>
+          </ul>
+        </div><!-- #blotterControl -->
+
+        <div id="fullBlotterWrap">
+          <table id="fullBlotter" class="tablesorter">
+            <thead>
+              <tr>
+                <th>Trade ID</th>
+                <th>Pair</th>
+                <th>Dealt CCY</th>
+                <th>Buy</th>
+                <th>Sell</th>
+                <th>2-Way</th>
+                <th>Amount</th>
+                <th>Trade Type</th>
+                <th>Execution Date</th>
+                <th>Execution Time</th>
+                <th>Settlement Date</th>
+                <th>Submitted</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="tradeId">876546</td>
+                <td class="pair">EUR/USD</td>
+                <td class="delt">Base</td>
+                <td id="buy" class="selected">X</td>
+                <td id="sell"></td>
+                <td id="twoway"></td>
+                <td class="amount">1,000,000</td>
+                <td class="tradeType">Spot</td>
+                <td class="executionDate">24 Jan 2010</td>
+                <td class="executionTime">17:14</td>
+                <td class="settlementDate">24 Jan 2010</td>
+                <td class="submitted"></td>
+              </tr>
+              <tr>
+                <td class="tradeId">876545</td>
+                <td class="pair">USD/JPY</td>
+                <td class="delt">Counter</td>
+                <td id="buy"></td>
+                <td id="sell" class="selected">X</td>
+                <td id="twoway"></td>
+                <td class="amount">2,000,000</td>
+                <td class="tradeType">Forward</td>
+                <td class="executionDate">24 Jan 2010</td>
+                <td class="executionTime">15:56</td>
+                <td class="settlementDate">24 Jan 2010</td>
+                <td class="submitted"></td>
+              </tr>
+              <tr>
+                <td class="tradeId">876544</td>
+                <td class="pair">GBP/USD</td>
+                <td class="delt">Base</td>
+                <td id="buy"></td>
+                <td id="sell" class="selected">X</td>
+                <td id="twoway"></td>
+                <td class="amount">8,000,000</td>
+                <td class="tradeType">Spot</td>
+                <td class="executionDate">24 Jan 2010</td>
+                <td class="executionTime">14:33</td>
+                <td class="settlementDate">24 Jan 2010</td>
+                <td class="submitted"></td>
+              </tr>
+              <tr>
+                <td class="tradeId">876543</td>
+                <td class="pair">USD/CAD<br>USD/CAD</td>
+                <td class="delt">Counter<br>Base</td>
+                <td id="buy"></td>
+                <td id="sell"></td>
+                <td id="twoway" class="selected">X</td>
+                <td class="amount">1,000,000<br>1,000,000</td>
+                <td class="tradeType">Swap</td>
+                <td class="executionDate">24 Jan 2010</td>
+                <td class="executionTime">17:14</td>
+                <td class="settlementDate">25 Jan 2010<br>25 Jan 2010</td>
+                <td class="submitted"></td>
+              </tr>
+              <tr>
+                <td class="tradeId">876542</td>
+                <td class="pair">EUR/USD</td>
+                <td class="delt">Base</td>
+                <td id="buy" class="selected">X</td>
+                <td id="sell"></td>
+                <td id="twoway"></td>
+                <td class="amount">1,000,000</td>
+                <td class="tradeType">Spot</td>
+                <td class="executionDate">24 Jan 2010</td>
+                <td class="executionTime">17:14</td>
+                <td class="settlementDate">24 Jan 2010</td>
+                <td class="submitted"></td>
+              </tr>
+              <tr>
+                <td class="tradeId">876541</td>
+                <td class="pair">USD/JPY</td>
+                <td class="delt">Counter</td>
+                <td id="buy"></td>
+                <td id="sell" class="selected">X</td>
+                <td id="twoway"></td>
+                <td class="amount">2,000,000</td>
+                <td class="tradeType">Forward</td>
+                <td class="executionDate">24 Jan 2010</td>
+                <td class="executionTime">15:56</td>
+                <td class="settlementDate">24 Jan 2010</td>
+                <td class="submitted"></td>
+              </tr>
+              <tr>
+                <td class="tradeId">876540</td>
+                <td class="pair">GBP/USD</td>
+                <td class="delt">Base</td>
+                <td id="buy"></td>
+                <td id="sell" class="selected">X</td>
+                <td id="twoway"></td>
+                <td class="amount">8,000,000</td>
+                <td class="tradeType">Spot</td>
+                <td class="executionDate">24 Jan 2010</td>
+                <td class="executionTime">14:33</td>
+                <td class="settlementDate">24 Jan 2010</td>
+                <td class="submitted"></td>
+              </tr>
+              <tr>
+                <td class="tradeId">876539</td>
+                <td class="pair">USD/CAD<br>USD/CAD</td>
+                <td class="delt">Counter<br>Base</td>
+                <td id="buy"></td>
+                <td id="sell"></td>
+                <td id="twoway" class="selected">X</td>
+                <td class="amount">1,000,000<br>1,000,000</td>
+                <td class="tradeType">Swap</td>
+                <td class="executionDate">24 Jan 2010</td>
+                <td class="executionTime">17:14</td>
+                <td class="settlementDate">25 Jan 2010<br>25 Jan 2010</td>
+                <td class="submitted"></td>
+              </tr>
+              <tr>
+                <td class="tradeId">876538</td>
+                <td class="pair">EUR/USD</td>
+                <td class="delt">Base</td>
+                <td id="buy" class="selected">X</td>
+                <td id="sell"></td>
+                <td id="twoway"></td>
+                <td class="amount">1,000,000</td>
+                <td class="tradeType">Spot</td>
+                <td class="executionDate">24 Jan 2010</td>
+                <td class="executionTime">17:14</td>
+                <td class="settlementDate">24 Jan 2010</td>
+                <td class="submitted"></td>
+              </tr>
+              <tr>
+                <td class="tradeId">876537</td>
+                <td class="pair">USD/JPY</td>
+                <td class="delt">Counter</td>
+                <td id="buy"></td>
+                <td id="sell" class="selected">X</td>
+                <td id="twoway"></td>
+                <td class="amount">2,000,000</td>
+                <td class="tradeType">Forward</td>
+                <td class="executionDate">24 Jan 2010</td>
+                <td class="executionTime">15:56</td>
+                <td class="settlementDate">24 Jan 2010</td>
+                <td class="submitted"></td>
+              </tr>
+              <tr>
+                <td class="tradeId">876536</td>
+                <td class="pair">GBP/USD</td>
+                <td class="delt">Base</td>
+                <td id="buy"></td>
+                <td id="sell" class="selected">X</td>
+                <td id="twoway"></td>
+                <td class="amount">8,000,000</td>
+                <td class="tradeType">Spot</td>
+                <td class="executionDate">24 Jan 2010</td>
+                <td class="executionTime">14:33</td>
+                <td class="settlementDate">24 Jan 2010</td>
+                <td class="submitted"></td>
+              </tr>
+              <tr>
+                <td class="tradeId">876535</td>
+                <td class="pair">USD/CAD<br>USD/CAD</td>
+                <td class="delt">Counter<br>Base</td>
+                <td id="buy"></td>
+                <td id="sell"></td>
+                <td id="twoway" class="selected">X</td>
+                <td class="amount">1,000,000<br>1,000,000</td>
+                <td class="tradeType">Swap</td>
+                <td class="executionDate">24 Jan 2010</td>
+                <td class="executionTime">17:14</td>
+                <td class="settlementDate">25 Jan 2010<br>25 Jan 2010</td>
+                <td class="submitted"></td>
+              </tr>
+              <tr>
+                <td class="tradeId">876534</td>
+                <td class="pair">EUR/USD</td>
+                <td class="delt">Base</td>
+                <td id="buy" class="selected">X</td>
+                <td id="sell"></td>
+                <td id="twoway"></td>
+                <td class="amount">1,000,000</td>
+                <td class="tradeType">Spot</td>
+                <td class="executionDate">24 Jan 2010</td>
+                <td class="executionTime">17:14</td>
+                <td class="settlementDate">24 Jan 2010</td>
+                <td class="submitted"></td>
+              </tr>
+              <tr>
+                <td class="tradeId">876533</td>
+                <td class="pair">USD/JPY</td>
+                <td class="delt">Counter</td>
+                <td id="buy"></td>
+                <td id="sell" class="selected">X</td>
+                <td id="twoway"></td>
+                <td class="amount">2,000,000</td>
+                <td class="tradeType">Forward</td>
+                <td class="executionDate">24 Jan 2010</td>
+                <td class="executionTime">15:56</td>
+                <td class="settlementDate">24 Jan 2010</td>
+                <td class="submitted"></td>
+              </tr>
+              <tr>
+                <td class="tradeId">876532</td>
+                <td class="pair">GBP/USD</td>
+                <td class="delt">Base</td>
+                <td id="buy"></td>
+                <td id="sell" class="selected">X</td>
+                <td id="twoway"></td>
+                <td class="amount">8,000,000</td>
+                <td class="tradeType">Spot</td>
+                <td class="executionDate">24 Jan 2010</td>
+                <td class="executionTime">14:33</td>
+                <td class="settlementDate">24 Jan 2010</td>
+                <td class="submitted"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div><!-- #fullBlotterWrap -->
+        <div id="showMoreControl">
+          <a href="">Show More</a>
+        </div><!-- #showMoreControl -->
+      </div><!-- #contentWrap -->
+      
+      <div id="footerWrap">
+        <div id="footer">
+          <p>
+            &copy2011 Currency Center, LLC.
+          </p>
+          <ul id="footerMenu">
+            <li>
+              <a href="">Disclaimer</a>
+            </li>
+            <li>
+              <a href="">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="">About Us</a>
+            </li>
+            <li class="last">
+              <a href="">Contact Us</a>
+            </li>
+          </ul>
+        </div><!-- #footer -->
+      </div><!-- #footerWrap -->
+    </div><!-- #globalWrap -->
+  </body>
+</html>

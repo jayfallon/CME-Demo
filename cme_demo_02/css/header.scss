@@ -1,0 +1,115 @@
+#headerWrap{
+  background:#f0f0f0;
+  padding-top:15px;
+  border-bottom:1px solid #999;
+  height:88px;
+  overflow:auto;
+}
+.loginHeader{
+  padding-bottom:30px;
+}
+h1{
+  background:url("../images/logo.png") no-repeat;
+  width:239px;
+  height:40px;
+  margin-bottom:30px;
+  padding:5px;
+  color:#fff;
+  font-size:28px;
+  float: left;
+}
+#navWrap{
+  clear:left;
+  overflow:auto;
+  #mainNav{
+    float:left;
+    li{
+      float:left;
+    }
+  }
+
+  #functionalNav{
+    float:right;
+    li{
+      float:left;
+    }
+  }
+}
+
+//navigation
+#navWrap{
+  width:960px;
+  position:absolute;
+  top:79px;
+  overflow:auto;
+  z-index:9999;
+  overflow:auto;
+}
+#functionalNav{
+  li{
+    margin-left:3px;
+    width:71px;
+    height:36px;
+    a{
+      width:71px;
+      height:24px;
+      position:absolute;
+      span{
+        display:none;
+      }
+    }
+  }
+  li#logout{
+    background:url("../images/logout_help.png") no-repeat 0 0;
+  }
+  li#help{
+    background:url("../images/logout_help.png") no-repeat -73px 0;
+  }
+}
+#mainNav{
+  li{
+    margin-right:1px;
+    width:72px;
+    height:36px;
+    a{
+      width:72px;
+      height:24px;
+      position:absolute;
+      span{
+        display:none;
+      }
+    }
+  }
+  li#spot{
+    background:url("../images/navigation.png") no-repeat 0 0;
+    width:72px;
+  }
+  li#spot.selected{
+    background:url("../images/navigation.png") no-repeat 0 -36px;
+    width:72px;
+  }
+  li#forward{
+    background:url("../images/navigation.png") no-repeat -73px 0;
+  }
+  li#forward.selected{
+    background:url("../images/navigation.png") no-repeat -73px -36px;
+    width:72px;
+  }
+  li#swap{
+    background:url("../images/navigation.png") no-repeat -146px 0;
+  }
+  li#swap.selected{
+    background:url("../images/navigation.png") no-repeat -146px -36px;
+    width:72px;
+  }
+  li#blotter{
+    background:url("../images/navigation.png") no-repeat -219px 0;
+  }
+  li#blotter.selected{
+    background:url("../images/navigation.png") no-repeat -219px -36px;
+    width:72px;
+  }
+  li#selected{
+    background-position:0 0;
+  }
+}

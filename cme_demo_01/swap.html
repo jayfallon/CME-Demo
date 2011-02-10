@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>CME Presentation</title>
+    
+    <script src="javascript/jquery.min.js" type="text/javascript"></script>
+    <script src="javascript/jquery.tablesorter.min.js" type="text/javascript"></script>
+    <script src="javascript/jquery-ui-1.8.7.custom.min.js" type="text/javascript"></script>
+    <script src="javascript/jquery.easing.1.3.js" type="text/javascript"></script>
+    <script src="javascript/jquery.timers.js" type="text/javascript"></script>
+    <script src="javascript/jquery.countdown.min.js" type="text/javascript"></script>
+    <script src="javascript/application.js" type="text/javascript"></script>
+    <script src="javascript/swap.js"></script>
+    <script>
+      //kill all data-loading timers to avoid unseen data loading after five minutes
+      $(function(){
+        $("#globalWrap").oneTime(300000, function(){
+          $("ul").stopTime();
+        });
+      });
+    </script>
+    
+    <link rel="stylesheet" href="css/application.css">
+    
+  </head>
+  
+  <body>
+    <div id="globalWrap">
+      <div id="headerWrap">
+        <div id="header">
+          <h1>
+           
+          </h1>
+          <div id="navWrap">
+            <ul id="mainNav">
+              <li id="spot"><a href="spot.html"><span>Spot</span></a></li>
+              <li id="forward"><a href="forward.html"><span>Forward</span></a></li>
+              <li id="swap" class="selected"><a href="swap.html"><span>Swap</span></a></li>
+              <li id="blotter"><a href="blotter.html"><span>Blotter</span></a></li>
+            </ul>
+            <ul id="functionalNav">
+              <li id="logout"><a href="index.html"><span>Logout</span></a></li>
+              <li id="help"><a href="#"><span>Help</span></a></li>
+            </ul>
+          </div><!-- #navWrap -->
+        </div><!-- #header -->
+      </div><!-- #headerWrap -->
+      <div id="contentWrap">
+        <div id="content">
+          
+          <div id="contentTop">
+            <div id="tradeFormWrap01">
+              <ul>
+                <form action="" method="get" accept-charset="utf-8">
+                <li class="left">
+                  <ul id="pairing">
+                    <li>
+                      <label for="pair">Pair</label><br>
+                      <select name="pair" id="swapPair01">
+                        <option value="">---</option>
+                        <option value="EUR/USD">EUR/USD</option>
+                        <option value="USD/JPY">USD/JPY</option>
+                      </select>
+                    </li>
+                    <li>
+                      <label for="delt">Dealt ccy</label><br>
+                      <ul>
+                        <li>
+                          <input name="swapDelt01" value="Base" id="base" type="radio" /><span>Base</span>
+                        </li>
+                        <li>
+                          <input name="swapDelt01" value="Counter" id="counter" type="radio" /><span>Counter</span>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <ul id="amountChooser">
+                    <li>
+                      <label for="amount">Amount</label><br>
+                      <input name="amount" value="" id="swapAmount01"><br>
+                      <span>(in millions)</span>
+                    </li>
+                    <li>
+                      <label for="amount">Tenor</label><br>
+                      <input name="tenor" value="" class="datepicker" />
+                    </li>
+                  </ul>
+                </li>
+                </form>
+              </ul>
+            </div><!-- #tradeFormWrap -->
+            <div id="tradeFormWrap02">
+              <ul>
+                <form action="" method="get" accept-charset="utf-8">
+                <li class="left">
+                  <ul id="pairing">
+                    <li>
+                      <label for="pair">Pair</label>
+                      <div id="swapPair02">
+                        ---
+                      </div><!-- #swapPair -->
+                    </li>
+                    <li>
+                      <label for="delt">Dealt ccy</label><br>
+                      <ul>
+                        <li>
+                          <div id="swapDelt02">
+                            ---
+                          </div><!-- #swapDelt -->
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <ul id="amountChooser">
+                    <li>
+                      <label for="amount">Amount</label><br>
+                      <div id="swapAmount02">
+
+                      </div><!-- #swapAmount -->
+                      <span>(in millions)</span>
+                    </li>
+                    <li>
+                      <label for="amount">Tenor</label><br>
+                      <input name="tenor" value="" class="datepicker" />
+                    </li>
+                  </ul>
+                </li>
+                </form>
+              </ul>
+            </div><!-- #tradeFormWrap -->
+          </div><!-- #contentTop -->
+          
+          <div id="contentBottom">
+            <div id="streamWrap01">
+              <ul id="swapDataList">
+                <li class="swapDataListItem">
+                  <ul>
+                    <li>
+                      <ul id="tradeSelect01">
+                        <li>
+                          <input type="button" name="buy" value="Buy" id="buy01">
+                        </li>
+                        <li>
+                          <input type="button" name="sell" value="Sell" id="sell01">
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="dataList">
+                      <ul id="myBuy01">
+                        <li class="lowest">1.35194</li>
+                        <li>1.35195</li>
+                        <li>1.35196</li>
+                        <li>1.35197</li>
+                        <li>1.35198</li>
+                      </ul>
+                    </li>
+                    <li class="dataList">
+                      <ul id="mySell01">
+                        <li class="lowest">1.35198</li>
+                        <li>1.35197</li>
+                        <li>1.35196</li>
+                        <li>1.35195</li>
+                        <li>1.35194</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="swapDataListItem">
+                  <ul>
+                    <li>
+                      <ul id="tradeSelect02">
+                        <li id="buyIndicator">Buy</li>
+                        <li id="sellIndicator">Sell</li>
+                      </ul>
+                    </li>
+                    <li class="dataList">
+                      <ul id="myBuy02">
+                        <li class="lowest">1.35198</li>
+                        <li>1.35197</li>
+                        <li>1.35196</li>
+                        <li>1.35195</li>
+                        <li>1.35194</li>
+                      </ul>
+                    </li>
+                    <li class="dataList">
+                      <ul id="mySell02">
+                        <li class="lowest">1.35194</li>
+                        <li>1.35195</li>
+                        <li>1.35196</li>
+                        <li>1.35197</li>
+                        <li>1.35198</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="swapDataListItem">
+                  <a href="#" class="executeButton">Execute</a>
+                </li>
+                <li id="swapTimer" class="swapDataListItem">
+                  <span class="countdown"></span> seconds remaining
+                </li>
+              </ul>
+            </div><!-- #streamWrap01 -->
+            
+          </div><!-- #contentBottom -->
+
+        </div><!-- #content -->
+      </div><!-- #contentWrap -->
+      
+      <div id="blotterWrap">
+        <div id="blotter">
+          <table class="tablesorter">
+            <thead>
+              <tr>
+                <th class="date">Date</th>
+                <th class="price">Price</th>
+                <th class="pair">Pair</th>
+                <th class="buysell">Buy/Sell</th>
+                <th class="volume">Volume</th>
+                <th>Submission Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>24 Jan 2010</td>
+                <td>1.34194</td>
+                <td>EUR/USD</td>
+                <td>Buy</td>
+                <td>10,000,000</td>
+                <td class="clearPort"></td>
+              </tr>
+              <tr>
+                <td>24 Jan 2010</td>
+                <td>82.371</td>
+                <td>USD/JPY</td>
+                <td>Sell</td>
+                <td>2,000,000</td>
+                <td class="clearPort"></td>
+              </tr>
+              <tr>
+                <td>24 Jan 2010</td>
+                <td>1.59907</td>
+                <td>GBP/USD</td>
+                <td>Buy</td>
+                <td>9,000,000</td>
+                <td class="clearPort"></td>
+              </tr>
+              <tr>
+                <td>24 Jan 2010</td>
+                <td>.95100</td>
+                <td>USD/CHF</td>
+                <td>Sell</td>
+                <td>4,000,000</td>
+                <td class="clearPort"></td>
+              </tr>
+              <tr>
+                <td>24 Jan 2010</td>
+                <td>.99654</td>
+                <td>AUD/USD</td>
+                <td>Buy</td>
+                <td>1,000,000</td>
+                <td class="clearPort"></td>
+              </tr>
+              <tr>
+                <td>24 Jan 2010</td>
+                <td>131.459</td>
+                <td>GBP/JPY</td>
+                <td>Sell</td>
+                <td>3,000,000</td>
+                <td class="clearPort"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div><!-- #blotter -->
+      </div><!-- #blotterWrap -->
+      
+      <div id="footerWrap">
+        <div id="footer">
+          <p>
+            &copy2011 Boston Technologies, Inc.
+          </p>
+          <ul id="footerMenu">
+            <li>
+              <a href="">Disclaimer</a>
+            </li>
+            <li>
+              <a href="">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="">About Us</a>
+            </li>
+            <li class="last">
+              <a href="">Contact Us</a>
+            </li>
+          </ul>
+        </div><!-- #footer -->
+      </div><!-- #footerWrap -->
+    </div><!-- #globalWrap -->
+  </body>
+</html>
