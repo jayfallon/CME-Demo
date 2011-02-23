@@ -144,7 +144,7 @@
 }
 
 ul#tradeSelect{
-  clear:left;
+  clear:both;
   margin-top:25px;
   overflow:auto;
   li{
@@ -153,40 +153,10 @@ ul#tradeSelect{
   }
 }
 
-ul#tradeSelect01{
-  margin:25px 0 15px;
-  padding-left:15px;
-  width:225px;
-  overflow:auto;
-  li{
-    margin-right:10px;
-    float:left;
-  }
-}
-
-ul#tradeSelect02{
-  margin:25px 0 15px;
-  padding-left:15px;
-  width:225px;
-  font-weight:bold;
-  overflow:auto;
-  li{
-    padding-left:15px;
-    height:23px;
-    overflow:auto;
-  }
-  li#buyIndicator{
-    background:url("../images/green_dot.png") no-repeat 0 3px;
-  }
-  li#sellIndicator{
-    background:url("../images/red_dot.png") no-repeat 0 3px;
-  }
-}
 
 
-#contentBottom, #tradeFormWrap{
+ul#tradeSelect{
   #buy, #sell, #buy01, #sell01, #buy02, #sell02, #twoway{
-    text-transform:uppercase;
     @include standardButton;
     &:hover{
       background:#3286ba;
@@ -247,117 +217,206 @@ ul#tradeSelect02{
   float:right;
 }
 
+ul#twoWayIndicator{
+	li{
+		margin:20px 30px 2px 0;
+		width:124px;
+		color:#999;
+		font-size:11px;
+		text-align:center;
+		text-transform:uppercase;
+		float:left;
+	}
+}
 
-
-#streamWrap{
+#streamWrap div.myTwoWay{
   clear:both;
   overflow:auto;
-  ul{
-    margin-top:20px;
-    li.timer{
-      background:url(../images/ajaxLoader.gif) no-repeat 0 8px;
-      margin-top:28px;
-      padding:8px 8px 8px 22px;
-      color:#808080;
+	ul{
+		li{
+			margin:0 30px 10px 0;
+			padding:8px;
+			border:1px solid #999;
+      font-size:18px;
       font-weight:bold;
-    }
-    li.oneway, li.twoway, li.timer{
-      margin-right:8px;
-      float:left;
-      ul{
-        float:left;
-        li{
-          margin-top:8px;
-          padding:8px;
-          border:1px solid #999;
-          font-size:18px;
-          font-weight:bold;
-          @include fourRoundedCorners;
-          a{
-            margin:0 0 3px 20px;
-            text-transform:uppercase;
-            float:right;
-            @include standardButton;
-          }
-          input{
-            margin:5px 0 3px 20px;
-            float:right;
-          }
-        }
-        li.lowest{
-          background-image: -webkit-gradient(
-              linear,
-              left bottom,
-              left top,
-              color-stop(0.09, #F07500),
-              color-stop(0.55, #FFA600)
-          );
-          background-image: -moz-linear-gradient(
-              center bottom,
-              #F07500 9%,
-              #FFA600 55%
-          );
-        }
+			float:left;
+			@include fourRoundedCorners;
+			input{
+        margin:5px 0 3px 20px;
+        float:right;
       }
-    }
-    li.swapStreamTwo{
-      margin-left:226px;
-    }
+		}
+	}
+	ul.lowest li{
+		background:#FFA600;
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.09, #F07500),
+        color-stop(0.55, #FFA600)
+    );
+    background-image: -moz-linear-gradient(
+        center bottom,
+        #F07500 9%,
+        #FFA600 55%
+    );
+	}
+}
+
+#execute{
+	margin:12px 30px 0 0;
+	float:left;
+	a{
+    text-transform:uppercase;
+    float:right;
+    @include standardButton;
   }
 }
 
-#streamWrap01{
-  overflow:auto;
+#streamWrap div.myBuy, #streamWrap div.mySell{
+	margin-top:15px;
   clear:both;
-  ul#swapDataList{
-    li.swapDataListItem#swapTimer{
-      background:url(../images/ajaxLoader.gif) no-repeat 0 8px;
-      margin-top:72px;
-      padding:8px 8px 8px 22px;
-      color:#808080;
+  overflow:auto;
+	ul{
+		margin-top:10px;
+		border:1px solid #999;
+		clear:both;
+		overflow:auto;
+		@include fourRoundedCorners;
+		li{
+      padding:8px;
+      font-size:18px;
       font-weight:bold;
-    }
-    li.swapDataListItem{
-      padding-right:30px;
-      float:left;
+			float:left !important;
       a{
-        margin:75px 0 3px 00px;
+        margin:0 0 3px 20px;
         text-transform:uppercase;
         float:right;
         @include standardButton;
       }
-      li.dataList{
-        ul{
-          li{
-            margin-top:8px;
-            padding:8px;
-            border:1px solid #999;
-            font-size:18px;
-            font-weight:bold;
-            @include fourRoundedCorners;
-            input{
-              margin:5px 0 3px 20px;
-              float:right;
-            }
-          }
-          li.lowest{
-            background-image: -webkit-gradient(
-                linear,
-                left bottom,
-                left top,
-                color-stop(0.09, #F07500),
-                color-stop(0.55, #FFA600)
-            );
-            background-image: -moz-linear-gradient(
-                center bottom,
-                #F07500 9%,
-                #FFA600 55%
-            );
-          }
-        }
+      input{
+        margin:5px 0 3px 20px;
+        float:right;
       }
     }
+	}
+	ul.lowest{
+		background:#FFA600;
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.09, #F07500),
+        color-stop(0.55, #FFA600)
+    );
+    background-image: -moz-linear-gradient(
+        center bottom,
+        #F07500 9%,
+        #FFA600 55%
+    );
   }
+}
+
+div.myBuy, div.mySell, div.myTwoWay{
+	float:left;
+}
+
+#timer01, #timer02, #timer03{
+	background:url(../images/ajaxLoader.gif) no-repeat 0 8px;
+  margin:30px 0 0 16px;
+  padding:8px 8px 8px 22px;
+  color:#808080;
+  font-weight:bold;
+	float:left;
+}
+
+#timer03{
+	margin-top:10px;//set from line #357
+}
+
+#swapTimer{
+	background:url(../images/ajaxLoader.gif) no-repeat 0 8px;
+	margin:20px 0 0 20px;
+	padding:8px 8px 8px 22px;
+  color:#808080;
+  font-weight:bold;
+	float:left;
+}
+
+.extraMargin{
+	margin-top:25px !important;
+}
+
+#swapIndicator{
+	li{
+		color:#999;
+		font-size:11px;
+		font-weight:normal !important;
+		text-transform:uppercase;
+		float:left;
+	}
+	li.bidInd{
+		margin-left:36px;
+	}
+	li.offerInd{
+		margin-left:36px;
+	}
+}
+
+#swapStreamWrap{
+	ul.lowest li.spread, ul.lowest li.bid, ul.lowest li.offer{
+		background:#FFA600;
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.09, #F07500),
+        color-stop(0.55, #FFA600)
+    );
+    background-image: -moz-linear-gradient(
+        center bottom,
+        #F07500 9%,
+        #FFA600 55%
+    );
+	}
+	ul{
+		margin:10px 30px 0 0;
+		clear:left;
+		overflow:auto;
+		li{
+			padding:8px;
+			font-weight:bold;
+			float:left;
+		}
+		li.spread{
+			border:1px solid #999;
+			border-right:0;
+			width:50px;
+			font-size:30px;
+			@include leftRoundedCorners;
+		}
+		li.bid{
+			padding-top:14px;
+			border-top:1px solid #999;
+			border-bottom:1px solid #999;
+		}
+		li.offer{
+			padding-top:14px;
+			border:1px solid #999;
+			border-left:0;
+			@include rightRoundedCorners;
+		}
+		li.execute{
+			margin-left:20px;
+			padding-top:12px;
+			a{
+		    text-transform:uppercase;
+		    float:right;
+		    @include standardButton;
+		  }
+		}
+	}
 }
 
 #twoway.active{
@@ -431,4 +490,3 @@ ul#tradeSelect02{
     }
   }
 }
-

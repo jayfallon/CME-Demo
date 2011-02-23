@@ -5,20 +5,20 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <title>CME Presentation</title>
     
-    <script src="javascript/jquery.min.js" type="text/javascript"></script>
+    <script src="javascript/jquery-1.5.min.js" type="text/javascript"></script>
     <script src="javascript/jquery.tablesorter.min.js" type="text/javascript"></script>
     <script src="javascript/jquery.easing.1.3.js" type="text/javascript"></script>
     <script src="javascript/jquery.timers.js" type="text/javascript"></script>
     <script src="javascript/jquery.countdown.min.js" type="text/javascript"></script>
-    <script src="javascript/application.js" type="text/javascript"></script>
-    <script src="javascript/spot.js"></script>
+		<script src="javascript/application.js" type="text/javascript"></script>
+    <script src="javascript/spot.js" type="text/javascript"></script>
     <script>
       //kill all data-loading timers to avoid unseen data loading after five minutes
-      $(function(){
-        $("#globalWrap").oneTime(300000, function(){
-          $("ul").stopTime();
-        });
-      });
+     $(function(){
+       $("#globalWrap").oneTime(300000, function(){
+         $("div").stopTime();
+       });
+     });
     </script>
     <link rel="stylesheet" href="css/application.css">
     
@@ -81,11 +81,11 @@
                     </li>
                   </ul>
                   <ul id="tradeSelect">
+	                  <li>
+	                    <input type="button" name="sell" value="IDL Offer&reg;" id="sell">
+	                  </li>
                     <li>
-                      <input type="button" name="buy" value="IDL Buy&reg;" id="buy">
-                    </li>
-                    <li>
-                      <input type="button" name="sell" value="IDL Sell&reg;" id="sell">
+                      <input type="button" name="buy" value="IDL Bid&reg;" id="buy">
                     </li>
                     <li>
                       <input type="button" name="twoway" value="2-Way" id="twoway">
@@ -103,61 +103,419 @@
           </div><!-- #expireMessage -->
           
           <div id="streamWrap">
-            
-            <ul id="myBuy">
-              <li class="oneway">
-                <ul>
-                  <li class="lowest">1.35194</li>
-                  <li>1.35195</li>
-                  <li>1.35196</li>
-                  <li>1.35197</li>
-                  <li>1.35198</li>
-                </ul>
-              </li>
-              <li id="timer01" class="timer">
-                 seconds remaining
-              </li>
-            </ul>
-            
-            <ul id="mySell">
-              <li class="oneway">
-                <ul>
-                  <li class="lowest">1.35198</li>
-                  <li>1.35197</li>
-                  <li>1.35196</li>
-                  <li>1.35195</li>
-                  <li>1.35194</li>
-                </ul>
-              </li>
-              <li id="timer02" class="timer">
-                 seconds remaining
-              </li>
-            </ul>
-            
-            <ul id="myTwoWay">
-              <li class="oneway">
-                <ul>
-                  <li class="lowest">1.35198</li>
-                  <li>1.35197</li>
-                  <li>1.35196</li>
-                  <li>1.35195</li>
-                  <li>1.35194</li>
-                </ul>
-              </li>
-              <li class="twoway">
-                <ul>
-                  <li class="lowest">1.35194</li>
-                  <li>1.35195</li>
-                  <li>1.35196</li>
-                  <li>1.35197</li>
-                  <li>1.35198</li>
-                </ul>
-              </li>
-              <li id="timer03" class="timer">
-                 seconds remaining
-              </li>
-            </ul>
-            
+						<div id="buyStream">
+							<div id="buy01" class="myBuy">
+								<ul class="lowest">
+									<li class="left">1.34195</li>
+									<li class="right">1.34199</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34193</li>
+									<li class="right">1.34201</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34189</li>
+									<li class="right">1.34204</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34187</li>
+									<li class="right">1.34204</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34186</li>
+									<li class="right">1.34205</li>
+								</ul>
+							</div>
+							<div id="buy02" class="myBuy">
+								<ul class="lowest">
+									<li class="left">1.34214</li>
+									<li class="right">1.34218</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34212</li>
+									<li class="right">1.34220</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34212</li>
+									<li class="right">1.34223</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34210</li>
+									<li class="right">1.34226</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34209</li>
+									<li class="right">1.34227</li>
+								</ul>
+							</div>
+							<div id="buy03" class="myBuy">
+								<ul class="lowest">
+									<li class="left">1.34225</li>
+									<li class="right">1.34228</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34225</li>
+									<li class="right">1.34230</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34223</li>
+									<li class="right">1.34231</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34222</li>
+									<li class="right">1.34233</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34220</li>
+									<li class="right">1.34234</li>
+								</ul>
+							</div>
+							<div id="buy04" class="myBuy">
+								<ul class="lowest">
+									<li class="left">1.34228</li>
+									<li class="right">1.34230</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34227</li>
+									<li class="right">1.34231</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34224</li>
+									<li class="right">1.34234</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34223</li>
+									<li class="right">1.34235</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34220</li>
+									<li class="right">1.34237</li>
+								</ul>
+							</div>
+							<div id="buy05" class="myBuy">
+								<ul class="lowest">
+									<li class="left">1.34248</li>
+									<li class="right">1.34250</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34247</li>
+									<li class="right">1.34253</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34244</li>
+									<li class="right">1.34252</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34243</li>
+									<li class="right">1.34251</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34242</li>
+									<li class="right">1.34251</li>
+								</ul>
+							</div>
+						</div>
+						<div id="sellStream">
+							<div id="sell01" class="mySell">
+								<ul class="lowest">
+									<li class="left">1.34195</li>
+									<li class="right">1.34199</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34193</li>
+									<li class="right">1.34201</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34189</li>
+									<li class="right">1.34204</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34187</li>
+									<li class="right">1.34204</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34186</li>
+									<li class="right">1.34205</li>
+								</ul>
+							</div>
+							<div id="sell02" class="mySell">
+								<ul class="lowest">
+									<li class="left">1.34214</li>
+									<li class="right">1.34218</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34212</li>
+									<li class="right">1.34220</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34212</li>
+									<li class="right">1.34223</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34210</li>
+									<li class="right">1.34226</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34209</li>
+									<li class="right">1.34227</li>
+								</ul>
+							</div>
+							<div id="sell03" class="mySell">
+								<ul class="lowest">
+									<li class="left">1.34225</li>
+									<li class="right">1.34228</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34225</li>
+									<li class="right">1.34230</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34223</li>
+									<li class="right">1.34231</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34222</li>
+									<li class="right">1.34233</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34220</li>
+									<li class="right">1.34234</li>
+								</ul>
+							</div>
+							<div id="sell04" class="mySell">
+								<ul class="lowest">
+									<li class="left">1.34228</li>
+									<li class="right">1.34230</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34227</li>
+									<li class="right">1.34231</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34224</li>
+									<li class="right">1.34234</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34223</li>
+									<li class="right">1.34235</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34220</li>
+									<li class="right">1.34237</li>
+								</ul>
+							</div>
+							<div id="sell05" class="mySell">
+								<ul class="lowest">
+									<li class="left">1.34248</li>
+									<li class="right">1.34250</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34247</li>
+									<li class="right">1.34253</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34244</li>
+									<li class="right">1.34252</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34243</li>
+									<li class="right">1.34251</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34242</li>
+									<li class="right">1.34251</li>
+								</ul>
+							</div>
+						</div>
+
+						<ul id="twoWayIndicator">
+							<li class="left">Bid</li>
+							<li class="offer">Offer</li>
+						</ul>
+						<div id="twoWayStream">
+							<div id="twoway01" class="myTwoWay">
+								<ul class="lowest">
+									<li class="left">1.34195</li>
+									<li class="right">1.34199</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34193</li>
+									<li class="right">1.34201</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34189</li>
+									<li class="right">1.34204</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34187</li>
+									<li class="right">1.34204</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34186</li>
+									<li class="right">1.34205</li>
+								</ul>
+							</div>
+							<div id="twoway02" class="myTwoWay">
+								<ul class="lowest">
+									<li class="left">1.34214</li>
+									<li class="right">1.34218</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34212</li>
+									<li class="right">1.34220</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34212</li>
+									<li class="right">1.34223</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34210</li>
+									<li class="right">1.34226</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34209</li>
+									<li class="right">1.34227</li>
+								</ul>
+							</div>
+							<div id="twoway03" class="myTwoWay">
+								<ul class="lowest">
+									<li class="left">1.34225</li>
+									<li class="right">1.34228</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34225</li>
+									<li class="right">1.34230</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34223</li>
+									<li class="right">1.34231</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34222</li>
+									<li class="right">1.34233</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34220</li>
+									<li class="right">1.34234</li>
+								</ul>
+							</div>
+							<div id="twoway04" class="myTwoWay">
+								<ul class="lowest">
+									<li class="left">1.34228</li>
+									<li class="right">1.34230</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34227</li>
+									<li class="right">1.34231</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34224</li>
+									<li class="right">1.34234</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34223</li>
+									<li class="right">1.34235</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34220</li>
+									<li class="right">1.34237</li>
+								</ul>
+							</div>
+							<div id="twoway05" class="myTwoWay">
+								<ul class="lowest">
+									<li class="left">1.34248</li>
+									<li class="right">1.34250</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34247</li>
+									<li class="right">1.34253</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34244</li>
+									<li class="right">1.34252</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34243</li>
+									<li class="right">1.34251</li>
+								</ul>
+
+								<ul>
+									<li class="left">1.34242</li>
+									<li class="right">1.34251</li>
+								</ul>
+							</div>
+						</div>
+						<div id="timer01">
+							seconds remaining
+						</div>
+						<div id="timer02">
+							seconds remaining
+						</div>
+						<div id="execute">
+							<a href="#" class="executeButton">Execute</a>
+						</div>
+            <div id="timer03">
+							&nbsp;seconds remaining
+						</div>
           </div><!-- #streamWrap -->
           
         </div><!-- #content -->

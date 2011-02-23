@@ -2025,39 +2025,14 @@ h1 {
       float: right; }
 
 ul#tradeSelect {
-  clear: left;
+  clear: both;
   margin-top: 25px;
   overflow: auto; }
   ul#tradeSelect li {
     margin-right: 10px;
     float: left; }
 
-ul#tradeSelect01 {
-  margin: 25px 0 15px;
-  padding-left: 15px;
-  width: 225px;
-  overflow: auto; }
-  ul#tradeSelect01 li {
-    margin-right: 10px;
-    float: left; }
-
-ul#tradeSelect02 {
-  margin: 25px 0 15px;
-  padding-left: 15px;
-  width: 225px;
-  font-weight: bold;
-  overflow: auto; }
-  ul#tradeSelect02 li {
-    padding-left: 15px;
-    height: 23px;
-    overflow: auto; }
-  ul#tradeSelect02 li#buyIndicator {
-    background: url("../images/green_dot.png") no-repeat 0 3px; }
-  ul#tradeSelect02 li#sellIndicator {
-    background: url("../images/red_dot.png") no-repeat 0 3px; }
-
-#contentBottom #buy, #contentBottom #sell, #contentBottom #buy01, #contentBottom #sell01, #contentBottom #buy02, #contentBottom #sell02, #contentBottom #twoway, #tradeFormWrap #buy, #tradeFormWrap #sell, #tradeFormWrap #buy01, #tradeFormWrap #sell01, #tradeFormWrap #buy02, #tradeFormWrap #sell02, #tradeFormWrap #twoway {
-  text-transform: uppercase;
+ul#tradeSelect #buy, ul#tradeSelect #sell, ul#tradeSelect #buy01, ul#tradeSelect #sell01, ul#tradeSelect #buy02, ul#tradeSelect #sell02, ul#tradeSelect #twoway {
   background: #D9D9D9;
   background: -moz-linear-gradient(0% 100% 90deg, #d9d9d9 0%, #d9d9d9 50%, white 50%, white 100%);
   background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, white), color-stop(0.5, white), color-stop(0.5, #d9d9d9), color-stop(1, #d9d9d9));
@@ -2080,49 +2055,49 @@ ul#tradeSelect02 {
   border-radius: 3px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px; }
-  #contentBottom #buy:hover, #contentBottom #sell:hover, #contentBottom #buy01:hover, #contentBottom #sell01:hover, #contentBottom #buy02:hover, #contentBottom #sell02:hover, #contentBottom #twoway:hover, #tradeFormWrap #buy:hover, #tradeFormWrap #sell:hover, #tradeFormWrap #buy01:hover, #tradeFormWrap #sell01:hover, #tradeFormWrap #buy02:hover, #tradeFormWrap #sell02:hover, #tradeFormWrap #twoway:hover {
+  ul#tradeSelect #buy:hover, ul#tradeSelect #sell:hover, ul#tradeSelect #buy01:hover, ul#tradeSelect #sell01:hover, ul#tradeSelect #buy02:hover, ul#tradeSelect #sell02:hover, ul#tradeSelect #twoway:hover {
     background: #333;
     background: -moz-linear-gradient(0% 100% 90deg, #2a2a2a 0%, #3c3c3c 50%, #4e4e4e 50%, #868686 100%);
     background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #868686), color-stop(0.5, #4e4e4e), color-stop(0.5, #3c3c3c), color-stop(1, #2a2a2a));
     color: #fff;
     text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.8); }
-  #contentBottom #buy:active, #contentBottom #sell:active, #contentBottom #buy01:active, #contentBottom #sell01:active, #contentBottom #buy02:active, #contentBottom #sell02:active, #contentBottom #twoway:active, #tradeFormWrap #buy:active, #tradeFormWrap #sell:active, #tradeFormWrap #buy01:active, #tradeFormWrap #sell01:active, #tradeFormWrap #buy02:active, #tradeFormWrap #sell02:active, #tradeFormWrap #twoway:active {
+  ul#tradeSelect #buy:active, ul#tradeSelect #sell:active, ul#tradeSelect #buy01:active, ul#tradeSelect #sell01:active, ul#tradeSelect #buy02:active, ul#tradeSelect #sell02:active, ul#tradeSelect #twoway:active {
     background: #111;
     background: -moz-linear-gradient(0% 100% 90deg, #202020 0%, #303030 50%, #404040 50%, #606060 100%);
     background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #606060), color-stop(0.5, #404040), color-stop(0.5, #303030), color-stop(1, #202020));
     color: #fff;
     text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.8); }
-  #contentBottom #buy:hover, #contentBottom #sell:hover, #contentBottom #buy01:hover, #contentBottom #sell01:hover, #contentBottom #buy02:hover, #contentBottom #sell02:hover, #contentBottom #twoway:hover, #tradeFormWrap #buy:hover, #tradeFormWrap #sell:hover, #tradeFormWrap #buy01:hover, #tradeFormWrap #sell01:hover, #tradeFormWrap #buy02:hover, #tradeFormWrap #sell02:hover, #tradeFormWrap #twoway:hover {
+  ul#tradeSelect #buy:hover, ul#tradeSelect #sell:hover, ul#tradeSelect #buy01:hover, ul#tradeSelect #sell01:hover, ul#tradeSelect #buy02:hover, ul#tradeSelect #sell02:hover, ul#tradeSelect #twoway:hover {
     background: #3286ba;
     background: -moz-linear-gradient(0% 100% 90deg, #3286ba 0%, #228aca 50%, #0d619b 50%, #084d88 100%);
     background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #084d88), color-stop(0.5, #0d619b), color-stop(0.5, #228aca), color-stop(1, #3286ba));
     color: #fff;
     text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.8); }
-  #contentBottom #buy:active, #contentBottom #sell:active, #contentBottom #buy01:active, #contentBottom #sell01:active, #contentBottom #buy02:active, #contentBottom #sell02:active, #contentBottom #twoway:active, #tradeFormWrap #buy:active, #tradeFormWrap #sell:active, #tradeFormWrap #buy01:active, #tradeFormWrap #sell01:active, #tradeFormWrap #buy02:active, #tradeFormWrap #sell02:active, #tradeFormWrap #twoway:active {
+  ul#tradeSelect #buy:active, ul#tradeSelect #sell:active, ul#tradeSelect #buy01:active, ul#tradeSelect #sell01:active, ul#tradeSelect #buy02:active, ul#tradeSelect #sell02:active, ul#tradeSelect #twoway:active {
     background: #3286ba;
     background: -moz-linear-gradient(0% 100% 90deg, #3286ba 0%, #228aca 50%, #0d619b 50%, #084d88 100%);
     background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #053660), color-stop(0.5, #0d619b), color-stop(0.5, #228aca), color-stop(1, #3286ba));
     color: #fff;
     text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.8); }
-#contentBottom #buy:hover, #contentBottom #buy01:hover, #contentBottom #buy02:hover, #tradeFormWrap #buy:hover, #tradeFormWrap #buy01:hover, #tradeFormWrap #buy02:hover {
+ul#tradeSelect #buy:hover, ul#tradeSelect #buy01:hover, ul#tradeSelect #buy02:hover {
   background: #64a01f;
   background: -moz-linear-gradient(0% 100% 90deg, #64a01f 0%, #64a01f 50%, #148003 50%, #148003 100%);
   background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #148003), color-stop(0.5, #148003), color-stop(0.5, #64a01f), color-stop(1, #64a01f));
   color: #fff;
   text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.8); }
-#contentBottom #buy:active, #contentBottom #buy01:active, #contentBottom #buy02:active, #tradeFormWrap #buy:active, #tradeFormWrap #buy01:active, #tradeFormWrap #buy02:active {
+ul#tradeSelect #buy:active, ul#tradeSelect #buy01:active, ul#tradeSelect #buy02:active {
   background: #64a01f;
   background: -moz-linear-gradient(0% 100% 90deg, #64a01f 0%, #64a01f 50%, #148003 50%, #148003 100%);
   background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #148003), color-stop(0.5, #148003), color-stop(0.5, #64a01f), color-stop(1, #64a01f));
   color: #fff;
   text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.8); }
-#contentBottom #sell:hover, #contentBottom #sell01:hover, #contentBottom #sell02:hover, #tradeFormWrap #sell:hover, #tradeFormWrap #sell01:hover, #tradeFormWrap #sell02:hover {
+ul#tradeSelect #sell:hover, ul#tradeSelect #sell01:hover, ul#tradeSelect #sell02:hover {
   background: #de464d;
   background: -moz-linear-gradient(0% 100% 90deg, #de464d 0%, #e63441 50%, #df1e30 50%, #b5061a 100%);
   background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #b5061a), color-stop(0.5, #df1e30), color-stop(0.5, #e63441), color-stop(1, #de464d));
   color: #fff;
   text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.8); }
-#contentBottom #sell:active, #contentBottom #sell01:active, #contentBottom #sell02:active, #tradeFormWrap #sell:active, #tradeFormWrap #sell01:active, #tradeFormWrap #sell02:active {
+ul#tradeSelect #sell:active, ul#tradeSelect #sell01:active, ul#tradeSelect #sell02:active {
   background: #de464d;
   background: -moz-linear-gradient(0% 100% 90deg, #de464d 0%, #e63441 50%, #df1e30 50%, #b5061a 100%);
   background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #b5061a), color-stop(0.5, #df1e30), color-stop(0.5, #e63441), color-stop(1, #de464d));
@@ -2135,92 +2110,213 @@ ul#tradeSelect02 {
 #tradeFormWrap02 {
   float: right; }
 
-#streamWrap {
+ul#twoWayIndicator li {
+  margin: 20px 30px 2px 0;
+  width: 124px;
+  color: #999;
+  font-size: 11px;
+  text-align: center;
+  text-transform: uppercase;
+  float: left; }
+
+#streamWrap div.myTwoWay {
   clear: both;
   overflow: auto; }
-  #streamWrap ul {
-    margin-top: 20px; }
-    #streamWrap ul li.timer {
-      background: url(../images/ajaxLoader.gif) no-repeat 0 8px;
-      margin-top: 28px;
-      padding: 8px 8px 8px 22px;
-      color: #808080;
-      font-weight: bold; }
-    #streamWrap ul li.oneway, #streamWrap ul li.twoway, #streamWrap ul li.timer {
-      margin-right: 8px;
-      float: left; }
-      #streamWrap ul li.oneway ul, #streamWrap ul li.twoway ul, #streamWrap ul li.timer ul {
-        float: left; }
-        #streamWrap ul li.oneway ul li, #streamWrap ul li.twoway ul li, #streamWrap ul li.timer ul li {
-          margin-top: 8px;
-          padding: 8px;
-          border: 1px solid #999;
-          font-size: 18px;
-          font-weight: bold;
-          border-radius: 3px;
-          -webkit-border-radius: 3px;
-          -moz-border-radius: 3px; }
-          #streamWrap ul li.oneway ul li a, #streamWrap ul li.twoway ul li a, #streamWrap ul li.timer ul li a {
-            margin: 0 0 3px 20px;
-            text-transform: uppercase;
-            float: right;
-            background: #D9D9D9;
-            background: -moz-linear-gradient(0% 100% 90deg, #d9d9d9 0%, #d9d9d9 50%, white 50%, white 100%);
-            background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, white), color-stop(0.5, white), color-stop(0.5, #d9d9d9), color-stop(1, #d9d9d9));
-            border: 1px solid #111;
-            box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.4), 0 1px 2px #999999;
-            -moz-box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.4), 0 1px 2px #999999;
-            -webkit-box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.4), 0 1px 2px #999999;
-            color: #111;
-            font-size: 14px;
-            font-weight: bold;
-            letter-spacing: 1px;
-            line-height: 1;
-            padding: 4px 10px 3px;
-            text-align: center;
-            text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.8);
-            text-decoration: none;
-            display: inline-block;
-            outline: none;
-            cursor: pointer;
-            border-radius: 3px;
-            -webkit-border-radius: 3px;
-            -moz-border-radius: 3px; }
-            #streamWrap ul li.oneway ul li a:hover, #streamWrap ul li.twoway ul li a:hover, #streamWrap ul li.timer ul li a:hover {
-              background: #333;
-              background: -moz-linear-gradient(0% 100% 90deg, #2a2a2a 0%, #3c3c3c 50%, #4e4e4e 50%, #868686 100%);
-              background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #868686), color-stop(0.5, #4e4e4e), color-stop(0.5, #3c3c3c), color-stop(1, #2a2a2a));
-              color: #fff;
-              text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.8); }
-            #streamWrap ul li.oneway ul li a:active, #streamWrap ul li.twoway ul li a:active, #streamWrap ul li.timer ul li a:active {
-              background: #111;
-              background: -moz-linear-gradient(0% 100% 90deg, #202020 0%, #303030 50%, #404040 50%, #606060 100%);
-              background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #606060), color-stop(0.5, #404040), color-stop(0.5, #303030), color-stop(1, #202020));
-              color: #fff;
-              text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.8); }
-          #streamWrap ul li.oneway ul li input, #streamWrap ul li.twoway ul li input, #streamWrap ul li.timer ul li input {
-            margin: 5px 0 3px 20px;
-            float: right; }
-        #streamWrap ul li.oneway ul li.lowest, #streamWrap ul li.twoway ul li.lowest, #streamWrap ul li.timer ul li.lowest {
-          background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.09, #f07500), color-stop(0.55, #ffa600));
-          background-image: -moz-linear-gradient(center bottom, #f07500 9%, #ffa600 55%); }
-    #streamWrap ul li.swapStreamTwo {
-      margin-left: 226px; }
+  #streamWrap div.myTwoWay ul li {
+    margin: 0 30px 10px 0;
+    padding: 8px;
+    border: 1px solid #999;
+    font-size: 18px;
+    font-weight: bold;
+    float: left;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px; }
+    #streamWrap div.myTwoWay ul li input {
+      margin: 5px 0 3px 20px;
+      float: right; }
+  #streamWrap div.myTwoWay ul.lowest li {
+    background: #FFA600;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.09, #f07500), color-stop(0.55, #ffa600));
+    background-image: -moz-linear-gradient(center bottom, #f07500 9%, #ffa600 55%); }
 
-#streamWrap01 {
-  overflow: auto;
-  clear: both; }
-  #streamWrap01 ul#swapDataList li.swapDataListItem#swapTimer {
-    background: url(../images/ajaxLoader.gif) no-repeat 0 8px;
-    margin-top: 72px;
-    padding: 8px 8px 8px 22px;
-    color: #808080;
-    font-weight: bold; }
-  #streamWrap01 ul#swapDataList li.swapDataListItem {
-    padding-right: 30px;
+#execute {
+  margin: 12px 30px 0 0;
+  float: left; }
+  #execute a {
+    text-transform: uppercase;
+    float: right;
+    background: #D9D9D9;
+    background: -moz-linear-gradient(0% 100% 90deg, #d9d9d9 0%, #d9d9d9 50%, white 50%, white 100%);
+    background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, white), color-stop(0.5, white), color-stop(0.5, #d9d9d9), color-stop(1, #d9d9d9));
+    border: 1px solid #111;
+    box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.4), 0 1px 2px #999999;
+    -moz-box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.4), 0 1px 2px #999999;
+    -webkit-box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.4), 0 1px 2px #999999;
+    color: #111;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 1;
+    padding: 4px 10px 3px;
+    text-align: center;
+    text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.8);
+    text-decoration: none;
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px; }
+    #execute a:hover {
+      background: #333;
+      background: -moz-linear-gradient(0% 100% 90deg, #2a2a2a 0%, #3c3c3c 50%, #4e4e4e 50%, #868686 100%);
+      background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #868686), color-stop(0.5, #4e4e4e), color-stop(0.5, #3c3c3c), color-stop(1, #2a2a2a));
+      color: #fff;
+      text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.8); }
+    #execute a:active {
+      background: #111;
+      background: -moz-linear-gradient(0% 100% 90deg, #202020 0%, #303030 50%, #404040 50%, #606060 100%);
+      background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #606060), color-stop(0.5, #404040), color-stop(0.5, #303030), color-stop(1, #202020));
+      color: #fff;
+      text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.8); }
+
+#streamWrap div.myBuy, #streamWrap div.mySell {
+  margin-top: 15px;
+  clear: both;
+  overflow: auto; }
+  #streamWrap div.myBuy ul, #streamWrap div.mySell ul {
+    margin-top: 10px;
+    border: 1px solid #999;
+    clear: both;
+    overflow: auto;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px; }
+    #streamWrap div.myBuy ul li, #streamWrap div.mySell ul li {
+      padding: 8px;
+      font-size: 18px;
+      font-weight: bold;
+      float: left !important; }
+      #streamWrap div.myBuy ul li a, #streamWrap div.mySell ul li a {
+        margin: 0 0 3px 20px;
+        text-transform: uppercase;
+        float: right;
+        background: #D9D9D9;
+        background: -moz-linear-gradient(0% 100% 90deg, #d9d9d9 0%, #d9d9d9 50%, white 50%, white 100%);
+        background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, white), color-stop(0.5, white), color-stop(0.5, #d9d9d9), color-stop(1, #d9d9d9));
+        border: 1px solid #111;
+        box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.4), 0 1px 2px #999999;
+        -moz-box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.4), 0 1px 2px #999999;
+        -webkit-box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.4), 0 1px 2px #999999;
+        color: #111;
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        line-height: 1;
+        padding: 4px 10px 3px;
+        text-align: center;
+        text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.8);
+        text-decoration: none;
+        display: inline-block;
+        outline: none;
+        cursor: pointer;
+        border-radius: 3px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px; }
+        #streamWrap div.myBuy ul li a:hover, #streamWrap div.mySell ul li a:hover {
+          background: #333;
+          background: -moz-linear-gradient(0% 100% 90deg, #2a2a2a 0%, #3c3c3c 50%, #4e4e4e 50%, #868686 100%);
+          background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #868686), color-stop(0.5, #4e4e4e), color-stop(0.5, #3c3c3c), color-stop(1, #2a2a2a));
+          color: #fff;
+          text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.8); }
+        #streamWrap div.myBuy ul li a:active, #streamWrap div.mySell ul li a:active {
+          background: #111;
+          background: -moz-linear-gradient(0% 100% 90deg, #202020 0%, #303030 50%, #404040 50%, #606060 100%);
+          background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #606060), color-stop(0.5, #404040), color-stop(0.5, #303030), color-stop(1, #202020));
+          color: #fff;
+          text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.8); }
+      #streamWrap div.myBuy ul li input, #streamWrap div.mySell ul li input {
+        margin: 5px 0 3px 20px;
+        float: right; }
+  #streamWrap div.myBuy ul.lowest, #streamWrap div.mySell ul.lowest {
+    background: #FFA600;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.09, #f07500), color-stop(0.55, #ffa600));
+    background-image: -moz-linear-gradient(center bottom, #f07500 9%, #ffa600 55%); }
+
+div.myBuy, div.mySell, div.myTwoWay {
+  float: left; }
+
+#timer01, #timer02, #timer03 {
+  background: url(../images/ajaxLoader.gif) no-repeat 0 8px;
+  margin: 30px 0 0 16px;
+  padding: 8px 8px 8px 22px;
+  color: #808080;
+  font-weight: bold;
+  float: left; }
+
+#timer03 {
+  margin-top: 10px; }
+
+#swapTimer {
+  background: url(../images/ajaxLoader.gif) no-repeat 0 8px;
+  margin: 20px 0 0 20px;
+  padding: 8px 8px 8px 22px;
+  color: #808080;
+  font-weight: bold;
+  float: left; }
+
+.extraMargin {
+  margin-top: 25px !important; }
+
+#swapIndicator li {
+  color: #999;
+  font-size: 11px;
+  font-weight: normal !important;
+  text-transform: uppercase;
+  float: left; }
+#swapIndicator li.bidInd {
+  margin-left: 36px; }
+#swapIndicator li.offerInd {
+  margin-left: 36px; }
+
+#swapStreamWrap ul.lowest li.spread, #swapStreamWrap ul.lowest li.bid, #swapStreamWrap ul.lowest li.offer {
+  background: #FFA600;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.09, #f07500), color-stop(0.55, #ffa600));
+  background-image: -moz-linear-gradient(center bottom, #f07500 9%, #ffa600 55%); }
+#swapStreamWrap ul {
+  margin: 10px 30px 0 0;
+  clear: left;
+  overflow: auto; }
+  #swapStreamWrap ul li {
+    padding: 8px;
+    font-weight: bold;
     float: left; }
-    #streamWrap01 ul#swapDataList li.swapDataListItem a {
-      margin: 75px 0 3px 00px;
+  #swapStreamWrap ul li.spread {
+    border: 1px solid #999;
+    border-right: 0;
+    width: 50px;
+    font-size: 30px;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px; }
+  #swapStreamWrap ul li.bid {
+    padding-top: 14px;
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999; }
+  #swapStreamWrap ul li.offer {
+    padding-top: 14px;
+    border: 1px solid #999;
+    border-left: 0;
+    -moz-border-radius-topright: 3px;
+    -moz-border-radius-bottomright: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px; }
+  #swapStreamWrap ul li.execute {
+    margin-left: 20px;
+    padding-top: 12px; }
+    #swapStreamWrap ul li.execute a {
       text-transform: uppercase;
       float: right;
       background: #D9D9D9;
@@ -2245,33 +2341,18 @@ ul#tradeSelect02 {
       border-radius: 3px;
       -webkit-border-radius: 3px;
       -moz-border-radius: 3px; }
-      #streamWrap01 ul#swapDataList li.swapDataListItem a:hover {
+      #swapStreamWrap ul li.execute a:hover {
         background: #333;
         background: -moz-linear-gradient(0% 100% 90deg, #2a2a2a 0%, #3c3c3c 50%, #4e4e4e 50%, #868686 100%);
         background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #868686), color-stop(0.5, #4e4e4e), color-stop(0.5, #3c3c3c), color-stop(1, #2a2a2a));
         color: #fff;
         text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.8); }
-      #streamWrap01 ul#swapDataList li.swapDataListItem a:active {
+      #swapStreamWrap ul li.execute a:active {
         background: #111;
         background: -moz-linear-gradient(0% 100% 90deg, #202020 0%, #303030 50%, #404040 50%, #606060 100%);
         background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #606060), color-stop(0.5, #404040), color-stop(0.5, #303030), color-stop(1, #202020));
         color: #fff;
         text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.8); }
-    #streamWrap01 ul#swapDataList li.swapDataListItem li.dataList ul li {
-      margin-top: 8px;
-      padding: 8px;
-      border: 1px solid #999;
-      font-size: 18px;
-      font-weight: bold;
-      border-radius: 3px;
-      -webkit-border-radius: 3px;
-      -moz-border-radius: 3px; }
-      #streamWrap01 ul#swapDataList li.swapDataListItem li.dataList ul li input {
-        margin: 5px 0 3px 20px;
-        float: right; }
-    #streamWrap01 ul#swapDataList li.swapDataListItem li.dataList ul li.lowest {
-      background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.09, #f07500), color-stop(0.55, #ffa600));
-      background-image: -moz-linear-gradient(center bottom, #f07500 9%, #ffa600 55%); }
 
 #twoway.active {
   background: #3286ba !important;

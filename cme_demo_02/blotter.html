@@ -5,19 +5,11 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <title>CME Presentation</title>
     
-    <script src="javascript/jquery.min.js" type="text/javascript"></script>
+    <script src="javascript/jquery-1.5.min.js" type="text/javascript"></script>
     <script src="javascript/jquery.tablesorter.min.js" type="text/javascript"></script>
     <script src="javascript/application.js" type="text/javascript"></script>
-    <script>
-      $(function(){
-        $("#fullBlotterWrap table").tablesorter({widgets: ['zebra']});
-        $("#fullBlotterWrap tr td:nth-child(1)").addClass("right");
-        $("#fullBlotterWrap tr td:nth-child(7)").addClass("right");
-        $("#fullBlotterWrap tr td:nth-child(3)").addClass("left");
-        $("#fullBlotterWrap tr td:nth-child(8)").addClass("left");
-        $("td#buy.selected, td#sell.selected, td#twoway.selected").text('');
-      });
-    </script>
+		<script src="javascript/blotter.js" type="text/javascript"></script>
+
     <link rel="stylesheet" href="css/application.css">
     
   </head>
